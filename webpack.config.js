@@ -1,3 +1,5 @@
+const NODE_ENV = process.env.NODE_ENV;
+
 const webpack	= require('webpack');
 const fs		= require('fs');
 const path		= require('path');
@@ -6,7 +8,6 @@ const resolve 	= path.resolve;
 
 const getConfig	= require('hjs-webpack');
 
-const NODE_ENV = process.env.NODE_ENV;
 const isDev = NODE_ENV === 'development';
 
 const root 		= resolve(__dirname);
@@ -38,7 +39,6 @@ const findLoader = (loaders, match) => {
 
 // existing css loader
 const cssloader = findLoader(config.module.loaders, matchCssLoaders);
-
 
 const newloader = Object.assign({}, cssloader, {
 	test: /\.module\.css$/,
