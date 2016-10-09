@@ -10,8 +10,10 @@ const App = React.createClass({
 	render: function() {
 		return (
 			<div className={styles.wrapper}>
-				// <i className="fa fa-star"></i>
-				<h1>Environment: {__NODE_ENV__}</h1>
+				<h1>
+					<i className="fa fa-star"></i>
+					Environment: {__NODE_ENV__}
+				</h1>
 			</div>
 		);
 	}
